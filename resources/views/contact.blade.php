@@ -68,18 +68,31 @@
               </div>
             </div><!-- End Info Item -->
 
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://wa.me/5513996475457?text=Gostaria%20de%20saber%20mais%20sobre%20as%20casas%20dispon%C3%ADveis%20para%20venda%20no%20Morada%20da%20Praia"><i class="bi bi-whatsapp flex-shrink-0"></i></a>
+              <div>
+                <h3>Whatsapp</h3>
+                <a href="https://wa.me/5513996475457?text=Gostaria%20de%20saber%20mais%20sobre%20as%20casas%20dispon%C3%ADveis%20para%20venda%20no%20Morada%20da%20Praia"><p>Clique aqui para entrar em contato conosco</p></a>
+              </div>
+            </div><!-- End Info Item -->
+
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="/contato" method="POST" data-aos="fade-up" data-aos-delay="200">
+            {{ csrf_field() }}
+            @method('POST')
               <div class="row gy-4">
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <input type="text" name="name" class="form-control" placeholder="Nome" required="">
                 </div>
 
-                <div class="col-md-6 ">
+                <div class="col-md-4 ">
                   <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                </div>
+                <div class="col-md-4 ">
+                  <input type="text" class="form-control" name="cellphone" placeholder="Celular" required="">
                 </div>
 
                 <div class="col-md-12">

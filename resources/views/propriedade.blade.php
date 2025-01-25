@@ -45,7 +45,7 @@
 								<div class="item">
 									<div class="work">
 										<div class="img d-flex align-items-center justify-content-center"> 
-                      <img src="..\img\properties\{{$properties->ref}}\{{$properties->ref . '-' . $i .'.jpg'}}"/>
+                      <img src="\img\properties\{{$properties->ref}}\{{$properties->ref . '-' . $i .'.jpg'}}"/>
 										</div>
 									</div>
 								</div>
@@ -56,7 +56,7 @@
 								<ul class="thumbnail">
                 @for ($i = 1; $i <= 20; $i++)
                     <li class="img">
-                      <a href="#"><img src="..\img\properties\{{$properties->ref}}\{{$properties->ref . '-' . $i .'.jpg'}}" alt="Image" class="img-fluid"></a>
+                      <a href="#"><img src="\img\properties\{{$properties->ref}}\{{$properties->ref . '-' . $i .'.jpg'}}" alt="Image" class="img-fluid"></a>
                     </li>
                   @endfor
 								</ul>

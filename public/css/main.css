@@ -67,7 +67,7 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -1256,7 +1256,7 @@ section,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.9) 75%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.9) 80%);
   z-index: 2;
 }
 
@@ -1265,12 +1265,13 @@ section,
   inset: 0;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 70%;
   object-fit: cover;
   z-index: 1;
 }
 
 .real-estate .card .card-body {
+  background-color: #000;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1288,6 +1289,16 @@ section,
   border: 2px solid #f58220;
   border-radius: 50px;
   margin-bottom: 10px;
+}
+
+.real-estate .card .card-body .sale-rent a {
+
+  color: #fff;
+
+}
+
+ .ref {
+  color:#fff;
 }
 
 .real-estate .card .card-body h3 {

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Property;
 
+use App\Models\User;
+
 class PropertyController extends Controller
 {
     public function index(){
@@ -24,7 +26,9 @@ class PropertyController extends Controller
 
         }
         
-        return view ('welcome',['properties' => $properties, 'search' => $search]);
+
+
+        return view ('welcome',['properties' => $properties, 'search' => $search,]);
     }
 
     public function create(){
@@ -52,11 +56,33 @@ class PropertyController extends Controller
             $event->image = $imageName;
         }
 
+        $user = auth()->user();
+        $property->user_id = $user->id;
+
     }
 
     public function show($id){
+        
         $property = Property::findOrFail($id);
+
+        //$propertyOwner = User::where('id', $event->user_id)->first() ->toArray();
+
         return view ('propriedade', ['properties' => $property]);
 
+    }
+
+    public function dashboard() {
+        $properties = Property::all();
+        $user = auth()->user();
+        //$properties = $user->properties;
+
+        return view('admin.dashboard' , ['properties' => $properties]);
+    }
+
+    public function destroy($id) {
+        Property::findOrFail($id)->delete;
+
+
+        return redirect('dashboard')->with('msg', 'Propriedade Excluída com sucesso!');
     }
 }

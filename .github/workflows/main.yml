@@ -15,3 +15,7 @@ jobs:
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
         server-dir: public_html/brasimoveis/
+        exclude: |
+          **/.env*
+          **/.env.example*/**
+          fileToExclude.txt
