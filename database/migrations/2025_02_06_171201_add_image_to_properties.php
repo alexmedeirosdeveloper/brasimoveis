@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('propertiesimg', function (Blueprint $table) {
-            $table->string('imageSlide');
+        Schema::table('properties', function (Blueprint $table) {
+            $table->string('image')->nullable();
         });
     }
 
@@ -21,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('propertiesimg');
+        Schema::table('properties', function (Blueprint $table) {
+            $table->dropColunm('image');
+        });
     }
 };

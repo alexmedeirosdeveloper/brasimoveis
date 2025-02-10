@@ -60,7 +60,7 @@
         <ul>
           <li><a href="/dashboard" class="active">Início</a></li>
           <li><a href="/dashboard/contato">Mensagens do Formulário</a></li>
-          <li><a href="/sobre">Criar Propriedades</a></li>
+          <li><a href="/criar/propriedade">Criar Propriedades</a></li>
           @auth
           <form action="/logout" method="POST">
           {{ csrf_field() }}

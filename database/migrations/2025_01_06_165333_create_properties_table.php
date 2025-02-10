@@ -13,17 +13,19 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('ref');
+            $table->integer('ref');
             $table->string('title');
             $table->text('description');
             $table->string('price');
+            $table->string('priceRange');
             $table->string('location');
             $table->integer('bed');
             $table->integer('bath');
             $table->integer('garage');
             $table->string('area');
             $table->string('type');
-            $table->timestamps();
+
+            $table->nullableTimestamps();
         });
     }
 

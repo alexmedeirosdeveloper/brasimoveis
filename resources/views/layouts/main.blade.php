@@ -53,13 +53,18 @@
         <img src="{{ URL::asset('/img/logo.png') }}" alt="">
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      
+      <nav id="navmenu">
+
+        <div class="navmenu d-flex align-items-center">
+        <ul>              
+
           <li><a href="/" class="active">Home</a></li>
           <li><a href="/sobre">Sobre</a></li>
           <li><a href="/contato">Contato</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </div>
       </nav>
 
     </div>
@@ -72,50 +77,46 @@
   <footer id="footer" class="footer light-background">
 
     <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Endereço</h4>
-            <p>Av. Itapuã, 1236</p>
-            <p>Morada da Praia, Bertioga - SP, 11250-000</p>
-            <p></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contato</h4>
-            <p>
-              <strong>Celular:</strong> <span>(13) 99647-5457</span><br>
-              <strong>Email:</strong> <span>imoveisbras@hotmail.com</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Horário de Atendimento</h4>
-            <p>
-              <strong>Segunda a Sexta:</strong> <span>9:00 - 17:00</span><br>
-              <strong>Domingo</strong>: <span>9:00 - 12:00</span>
-            </p>
-          </div>
-        </div>
-
+      <div class="row gy-3 d-flex justify-content-center text-center">
         <div class="col-lg-3 col-md-6">
           <h4>Redes Sociais</h4>
-          <div class="social-links d-flex">
+          <div class="social-links d-flex justify-content-center text-center">
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           </div>
         </div>
 
-      </div>
-    </div>
+
+            <div class="col-lg-6">
+
+                    <div class="card p-3">
+                      <form action="/" method="GET">
+                        <div class="row g-3 mt-2">
+
+                                  <div class="col-md-8">
+
+                                      <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
+                                      
+                                  </div>
+
+                                  <div class="col-md-4">
+
+                                      <button class="btn btn-secondary btn-block">Procurar</button>
+                                      
+                                  </div>
+                            
+                        </div>
+                      </form>
+
+
+
+                    </div>
+
+
+
+            </div>
+
+    
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Braz Imóveis</strong> <span>Todos os Direitos Reservados</span></p>

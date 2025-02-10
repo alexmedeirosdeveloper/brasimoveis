@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get ('/',[PropertyController::class, 'index']);
 
-Route::get ('propriedade/{id}',[PropertyController::class, 'show']);
+Route::get ('/propriedade/{id}',[PropertyController::class, 'show']);
+
+Route::get ('/criar/propriedade',[PropertyController::class, 'create'])->middleware('auth');
+
+Route::post ('/propriedade',[PropertyController::class, 'store'])->middleware('auth');
 
 Route::get('/dashboard', [PropertyController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
