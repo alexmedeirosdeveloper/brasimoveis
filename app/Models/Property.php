@@ -19,6 +19,8 @@ class Property extends Model
 
         // Indicar quais colunas podem ser cadastrada
         protected $fillable = ['id', 'ref'];
+
+        protected $guarded = [];
     
         public function property()
         {

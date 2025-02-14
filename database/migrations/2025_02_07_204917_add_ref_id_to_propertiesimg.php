@@ -15,7 +15,6 @@ return new class extends Migration
 
             $table->foreignId('properties_id');
             $table->foreignId('ref_id');
-            $table->foreignId('timestamps()');
 
 
  

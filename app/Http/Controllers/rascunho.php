@@ -25,7 +25,7 @@ $filter = Property::orderBy('location','asc')
 
 
 
-        
+
 
         //Image Upload
 
@@ -42,3 +42,10 @@ if($request->hasFile('image') && $request->file('image')->isValid()){
 
     $property->image = $imageName;
 }
+
+
+
+$file = $request->file('image');
+            $filename = date('').$file->getClientOriginalName();
+            $file->move(public_path('img/properties') . $filename);
+            $image['image'] = $filename;

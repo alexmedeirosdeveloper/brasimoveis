@@ -53,7 +53,7 @@
                                         <td scropt="row">{{$property->price}}</td>
                                         <td scropt="row"></td>
                                         <td scropt="row">
-                                            <a href="" class="btn btn-info edit-btn">
+                                            <a href="propriedade/editar/{{ $property->id }}" class="btn btn-info edit-btn">
                                                 <ion-icon name="create-outline"></ion-icon>
                                                  Editar
                                             </a>

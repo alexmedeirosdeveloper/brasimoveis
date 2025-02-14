@@ -24,8 +24,11 @@ Route::post('/contato', [ContactController::class, 'store']);
 
 Route::get('/dashboard/contato', [ContactController::class, 'contactDashboard'])->middleware('auth')->name('contactDashboard');
 
-Route::delete ('propriedade/{id}',[PropertyController::class, 'destroy']);
+Route::delete ('propriedade/{id}',[PropertyController::class, 'destroy'])->middleware('auth');
 
+Route::get ('propriedade/editar/{id}',[PropertyController::class, 'edit'])->middleware('auth')->name('edit');
+
+Route::put ('propriedade/atualizar/{id}',[PropertyController::class, 'update'])->middleware('auth')->name('update');
 
 
 Route::get('/sobre', function () {

@@ -193,9 +193,43 @@ class PropertyController extends Controller
     }
 
     public function destroy($id) {
-        Property::findOrFail($id)->delete;
+
+        Property::findOrFail($id)->delete();
 
 
         return redirect('dashboard')->with('msg', 'Propriedade Excluída com sucesso!');
     }
+
+    public function edit($id) {
+
+        $property = Property::findOrFail($id);
+
+
+        return view('admin.edit' , ['property' => $property]);
+    }
+
+    public function update(Request $request) {
+
+        $property = new Property;
+
+        $data = $request->all();
+
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+
+            $ref = $property->ref = $request->ref;
+            
+            $imagePath = $request->image->storeAs('properties/' . $ref, $ref . '-1.jpg');
+
+
+            $data['image'] = $imagePath;
+
+            }
+
+
+        Property::findOrFail($request->id)->update($data);
+
+
+        return redirect('/dashboard')->with('msg', 'Propriedade Atualizada com sucesso!');
+    }
+
 }
