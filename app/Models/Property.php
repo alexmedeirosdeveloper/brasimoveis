@@ -10,20 +10,33 @@ class Property extends Model
         return $this ->belongsTo('App\Models\User');
     }
 
-    public function images(){
-        return $this ->belongsToMany('App\Models\Image');
+    public function image(){
+        return $this ->belongsTo('App\Models\Image');
+    }
+
+    public function contact(){
+        return $this ->belongsTo('App\Models\Contact');
     }
 
         // Indicar o nome da tabela
         protected $table = 'properties';
 
         // Indicar quais colunas podem ser cadastrada
-        protected $fillable = ['id', 'ref'];
 
         protected $guarded = [];
     
         public function property()
         {
             return $this->hasMany(User::class);
+        }
+
+        public function images()
+        {
+            return $this->hasMany(Image::class);
+        }
+
+        public function contacts()
+        {
+            return $this->hasMany(Contact::class);
         }
 }

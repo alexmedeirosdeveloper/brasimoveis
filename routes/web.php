@@ -4,6 +4,8 @@ use App\Http\Controllers\PropertyController;
 
 use App\Http\Controllers\ContactController;
 
+use App\Http\Controllers\ImageController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,7 +16,11 @@ Route::get ('/propriedade/{id}',[PropertyController::class, 'show']);
 
 Route::get ('/criar/propriedade',[PropertyController::class, 'create'])->middleware('auth');
 
+Route::get ('/criar/slides',[ImageController::class, 'create'])->middleware('auth');
+
 Route::post ('/propriedade',[PropertyController::class, 'store'])->middleware('auth');
+
+Route::post ('/slides',[ImageController::class, 'store'])->middleware('auth');
 
 Route::get('/dashboard', [PropertyController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 

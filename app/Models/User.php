@@ -68,4 +68,8 @@ class User extends Authenticatable
     public function properties() {
         return $this->hasMany('App\Models\Property');
     }
+
+    public function images() {
+        return $this->hasMany('App\Models\Image');
+    }
 }

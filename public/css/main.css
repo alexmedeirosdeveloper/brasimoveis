@@ -581,8 +581,23 @@ border: 1px solid #00838f;
   position: relative;
 }
 
+.page-title .heading-dashboard {
+  padding: 160px 0 40px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.page-title .heading-filter {
+  padding: 160px 0 40px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.page-title .heading-filter h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
 .page-title .heading {
-  padding: 140px 0 40px 0;
+  padding: 40px 0 40px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -623,7 +638,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 150px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -660,7 +675,10 @@ section,
 # Slider Properties
 --------------------------------------------------------------*/
 
-
+.img-fluid .slider{
+  width: 100%;
+  max-height: 400px;
+}
 
 
 
@@ -1246,7 +1264,7 @@ section,
   position: relative;
   border-radius: 0px;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 325px;
 }
 
 .real-estate .card:before {
@@ -1261,7 +1279,6 @@ section,
   inset: 0;
   display: block;
   width: 100%;
-  height: 70%;
   object-fit: cover;
   z-index: 1;
 }
@@ -1272,13 +1289,13 @@ section,
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 3;
-  padding: 30px;
+  z-index: 2;
+  padding: 0px;
 }
 
 .real-estate .card .card-body .sale-rent {
   display: inline-block;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #fff;
   padding: 4px 20px;
@@ -1295,6 +1312,7 @@ section,
 
  .ref {
   color:#fff;
+  margin-left: 15px;
 }
 
 .real-estate .card .card-body h3 {
@@ -1309,26 +1327,29 @@ section,
   color: var(--contrast-color);
 }
 
+.real-estate .card .card-body .card-content .stretched-link .ref h5 {
+  margin-left:10px;
+}
+
+
 .real-estate .card .card-body .card-content {
   background-color: #f58220;
   color: var(--contrast-color);
   height: 80px;
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   margin-top: 10px;
   margin-bottom: -80px;
-  margin-left: -30px;
-  margin-right: -30px;
   transition: 0.3s;
   padding: 0 10px;
 }
 
 .real-estate .card .card-body .card-content .propery-info {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .real-estate .card:hover .card-content {
-  margin-bottom: -30px;
+  margin-bottom: 0px;
   visibility: visible;
   opacity: 1;
 }

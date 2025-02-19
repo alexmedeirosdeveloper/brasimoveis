@@ -6,16 +6,70 @@ use Illuminate\Http\Request;
 
 use App\Models\Contact;
 
+use App\Models\Property;
+
 
 class ContactController extends Controller
 {
 
         public function index(){
-        
-            $contact = Contact::all();
     
-            return view ('contact',['contacts' => $contact]);
-        }
+            $contact = Contact::all();
+
+            $properties = Property::all();
+    
+            $type = request('type');
+    
+            if (!empty($type)) {
+    
+                $properties = Property::where([
+                    ['type', 'like','%'.$type.'%']
+                ])->get();
+    
+            } 
+    
+            $area = request('area');
+    
+            if (!empty($area)) {
+    
+                $properties = Property::where([
+                    ['area', 'like','%'.$area.'%']
+                ])->get();
+    
+            }
+    
+    
+            $priceRange = request('priceRange');
+    
+    
+            if (!empty($priceRange)) {
+    
+                $properties = Property::where([
+                    ['priceRange', 'like','%'.$priceRange.'%']
+                ])->get();
+    
+            }
+    
+    
+    
+            $bed = request('bed');
+    
+    
+            if (!empty($bed)) {
+    
+                $properties = Property::where([
+                    ['bed', 'like','%'.$bed.'%']
+                ])->get();
+    
+            }
+
+            
+            return view ('contact',['properties' => $properties, 
+                                    'type' => $type, 
+                                    'area' => $area,
+                                    'priceRange' => $priceRange,
+                                    'bed' => $bed ]);
+        }  
     
         public function store(Request $request){
 

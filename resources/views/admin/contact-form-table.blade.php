@@ -10,7 +10,7 @@
   <main class="main">
 
   <div class="page-title" data-aos="fade">
-      <div class="heading">
+      <div class="heading-dashboard">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
              <div class="content">

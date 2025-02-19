@@ -112,11 +112,19 @@ class PropertyController extends Controller
         $property->area = $request->area;
         $property->type = $request->type;
 
+            if($request->hasFile('price') && $request->file('price')->isValid()){
+
+                $price = $property->price = $request->price;
+                $priceFormat = number_format($price, 2, ',', '.');
+                $property['price'] = $priceFormat;
+
+            }
 
 
             if($request->hasFile('image') && $request->file('image')->isValid()){
 
                 $ref = $property->ref = $request->ref;
+
 
                 Storage::makeDirectory("/app/public/properties/$ref");
                 
@@ -132,6 +140,8 @@ class PropertyController extends Controller
                 $imgSlide = [];
 
                 $ref = $property->ref = $request->ref;
+
+                $id = $property->id = $request->id;
 
                 $i = 2;
 
@@ -153,6 +163,7 @@ class PropertyController extends Controller
 
 
             }
+    
 
         $user = auth()->user();
         $property->user_id = $user->id;
@@ -173,9 +184,9 @@ class PropertyController extends Controller
 
         $ref = $property->ref;
 
-        $directory = "public/properties/" . $ref;
+        $directory = storage_path('public/properties/' . $id);
 
-        $files = Storage::files($directory);
+        $files = Storage::allFiles($directory);
 
         //$propertyOwner = User::where('id', $event->user_id)->first() ->toArray();
 
@@ -184,12 +195,23 @@ class PropertyController extends Controller
     }
 
     public function dashboard() {
-        $properties = Property::all();
+
+        $searchDashboard = request('searchDashboard');
+
+        if ($searchDashboard) {
+
+            $properties = Property::where([
+                ['ref', 'like','%'.$searchDashboard.'%']
+            ])->get();
+
+        }else {
+
         $user = auth()->user();
         $properties = Property::orderBy('id', 'desc')->get();
         //$properties = $user->properties;
-
-        return view('admin.dashboard' , ['properties' => $properties]);
+        }
+        return view('admin.dashboard' , ['properties' => $properties, 'searchDashboard' => $searchDashboard]);
+        
     }
 
     public function destroy($id) {
@@ -210,21 +232,7 @@ class PropertyController extends Controller
 
     public function update(Request $request) {
 
-        $property = new Property;
-
         $data = $request->all();
-
-        if($request->hasFile('image') && $request->file('image')->isValid()){
-
-            $ref = $property->ref = $request->ref;
-            
-            $imagePath = $request->image->storeAs('properties/' . $ref, $ref . '-1.jpg');
-
-
-            $data['image'] = $imagePath;
-
-            }
-
 
         Property::findOrFail($request->id)->update($data);
 

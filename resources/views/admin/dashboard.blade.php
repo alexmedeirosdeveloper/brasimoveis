@@ -10,7 +10,7 @@
   <main class="main">
 
   <div class="page-title" data-aos="fade">
-      <div class="heading">
+      <div class="heading-dashboard">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
              <div class="content">
@@ -20,6 +20,36 @@
                         <div class="card-header">
                             <h4 class="card-title">Lista de Propriedades</h4>
                         </div>
+
+                        <div class="col-lg-12 p-3">
+
+<div class="card p-3">
+  <form action="/dashboard/" method="GET">
+    <div class="row g-3 mt-2">
+
+              <div class="col-md-9">
+
+                  <input type="number" id="searchDashboard" name="searchDashboard" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
+                  
+              </div>
+
+              <div class="col-md-3">
+
+                  <button class="btn btn-secondary btn-block">Procurar</button>
+                  
+              </div>
+        
+    </div>
+  </form>
+
+
+
+</div>
+
+
+
+</div>
+
                         <div class="card-body">
                             <div class="table-responsive">
                             <table class="table">

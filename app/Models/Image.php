@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
 
+    public function user(){
+        return $this ->belongsTo('App\Models\User');
+    }
 
-
-    public function properties()
-    {
-        return $this->belongsToMany('App\Models\Property');
+    public function properties() {
+        return $this->hasMany('App\Models\Property');
     }
 
     // Indicar o nome da tabela
@@ -20,5 +21,9 @@ class Image extends Model
     // Indicar quais colunas podem ser cadastrada
     protected $fillable = ['imageSlide', 'properties_id'];
 
+    public function image()
+    {
+        return $this->hasMany(User::class);
+    }
 
 }

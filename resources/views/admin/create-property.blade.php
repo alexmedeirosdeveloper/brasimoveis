@@ -6,7 +6,7 @@
 
 
 <div class="page-title" data-aos="fade">
-      <div class="heading">
+      <div class="heading-dashboard">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
              <div class="content">
@@ -22,7 +22,7 @@
                     {{ csrf_field() }}
                         <div class="mb-3 p-4">
                             <label for="image">Imagem da Página Inicial</label>
-                            <input type="file" id="image" name="image" class="form-control-file">
+                            <input type="file" id="image" name="image" class="form-control-file" >
                         </div>
                         <div class="mb-3 p-4">
                             <label for="imageSlide">Imagem dos Slides</label>
@@ -30,27 +30,27 @@
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Título</label>
-                                <input type="text" class="form-control" id="title" name="title" placeholder="Título">
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Título" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Referência</label>
-                                <input type="text" class="form-control" id="ref" name="ref" placeholder="Referência (Apenas Números)">
+                                <input type="text" class="form-control" id="ref" name="ref" placeholder="Referência (Apenas Números)" required>
                         </div>                        
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Preço</label>
-                                <input type="text" class="form-control" id="price" name="price" placeholder="Preço">
+                                <input type="text" class="form-control" id="price" name="price" step="0.01" placeholder="Preço" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Número de Banheiros</label>
-                                <input type="text" class="form-control" id="bath" name="bath" placeholder="Número de Banheiros (Apenas Números)">
+                                <input type="text" class="form-control" id="bath" name="bath" placeholder="Número de Banheiros (Apenas Números)" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Número de Vagas (Garagem)</label>
-                                <input type="text" class="form-control" id="garage" name="garage" placeholder="Número de Banheiros (Apenas Números)">
+                                <input type="text" class="form-control" id="garage" name="garage" placeholder="Número de Banheiros (Apenas Números)" required>
                         </div>                                                                        
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                         </div>
                         <div class="mb-3 p-4">
                             <select class="form-select" aria-label="Default select example" id="location" name="location">

@@ -13,11 +13,8 @@ return new class extends Migration
     {
         Schema::table('propertiesimg', function (Blueprint $table) {
 
-            $table->foreignId('properties_id');
-            $table->foreignId('ref_id');
+            $table->foreignId('properties_id')->constrained();
 
-
- 
 
             
         });
@@ -29,10 +26,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('propertiesimg', function (Blueprint $table) {
+
             $table->foreignId('properties_id')
-            ->constrained()
-            ->onDelete('cascade');
-            $table->foreignId('ref_id')
             ->constrained()
             ->onDelete('cascade');
 
