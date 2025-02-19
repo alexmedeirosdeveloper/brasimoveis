@@ -11,7 +11,7 @@
 
 <!-- Page Title -->
 <div class="page-title" data-aos="fade">
-  <div class="heading">
+  <div class="heading-properties">
     <div class="container">
       <div class="row d-flex justify-content-center text-center">
         <div class="col-lg-8">
@@ -43,20 +43,20 @@
 
   <div class="carousel-inner">
   <div class="carousel-item active">
-    <a href="#"><img src="\storage\properties\{{$properties->ref}}\{{$properties->ref . '-' . '1' .'.jpg'}}" alt="Image" class="img-fluid slider"></a>
+  <a href="#"><img src="\storage\properties\{{$properties->ref}}\{{$properties->ref . '-' . '1' .'.jpg'}}" alt="Image" class="img-fluid slider"></a>
   </div>
-    @for ($i = 1; $i <= 20; $i++)
+    @for ($i = 2; $i <= count($files); $i++)
     <div class="carousel-item">
     <a href="#"><img src="\storage\properties\{{$properties->ref}}\{{$properties->ref . '-' . $i .'.jpg'}}" alt="Image" class="img-fluid slider"></a>
     </div>
     @endfor
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <i class="bi bi-arrow-left-circle-fill"></i>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <i class="bi bi-arrow-right-circle-fill"></i>
     <span class="sr-only">Next</span>
   </a>
 </div>

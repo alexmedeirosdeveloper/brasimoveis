@@ -14,7 +14,7 @@
                     <div class="col-md-12">
                         <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Lista de Propriedades</h4>
+                            <h4 class="card-title">Criar Propriedade</h4>
                         </div>
 
 
@@ -22,7 +22,7 @@
                     {{ csrf_field() }}
                         <div class="mb-3 p-4">
                             <label for="image">Imagem da Página Inicial</label>
-                            <input type="file" id="image" name="image" class="form-control-file" >
+                            <input type="file" id="image" name="image" class="form-control-file" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="imageSlide">Imagem dos Slides</label>
@@ -53,13 +53,13 @@
                             <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                         </div>
                         <div class="mb-3 p-4">
-                            <select class="form-select" aria-label="Default select example" id="location" name="location">
+                            <select class="form-select" aria-label="Default select example" id="location" name="location" required>
                                 <option selected>Localização</option>
                                 <option value="Morada da Praia">Morada da Praia</option>
                             </select>
                         </div>  
                         <div class="mb-3 p-4">
-                        <select class="form-select" aria-label="Default select example" id="bed" name="bed">
+                        <select class="form-select" aria-label="Default select example" id="bed" name="bed" required>
                             <option value="">Dormitórios</option>
                             <option value="1">1 dormitório</option>
                             <option value="2">2 dormitórios</option>
@@ -74,7 +74,7 @@
                         </select>
                         </div>
                         <div class="mb-3 p-4">
-                          <select class="form-select" aria-label="Default select example" id="priceRange" name="priceRange">
+                          <select class="form-select" aria-label="Default select example" id="priceRange" name="priceRange" required>
                             <option value="">Média de Preço</option>
                             <option value="Até 500 mil">Até 500 mil</option>
                             <option value="500 mil -600 mil">500 mil -600 mil</option>
@@ -91,7 +91,7 @@
                           </select>                          
                         </div>
                         <div class="mb-3 p-4">
-                          <select class="form-select" id="type" name="type" aria-label="Default select example">
+                          <select class="form-select" id="type" name="type" aria-label="Default select example" required>
                             <option value="">Tipo de Propriedade</option>
                             <option value="Casa Térrea">Casa Térrea</option>
                             <option value="Sobrado">Sobrado</option>
@@ -101,7 +101,7 @@
                           </select>                          
                         </div>
                         <div class="col-md-2 m-3">
-                        <select class="form-select" aria-label="Default select example" id="area" name="area">
+                        <select class="form-select" aria-label="Default select example" id="area" name="area" required>
                             <option value="">Area em m²</option>
                             <option value="100 à 200 m²">100 à 200 m²</option>
                             <option value="200 à 300 m² ">200 à 300 m² </option>

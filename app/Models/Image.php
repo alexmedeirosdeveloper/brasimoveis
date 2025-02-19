@@ -18,8 +18,6 @@ class Image extends Model
     // Indicar o nome da tabela
     protected $table = 'propertiesimg';
     
-    // Indicar quais colunas podem ser cadastrada
-    protected $fillable = ['imageSlide', 'properties_id'];
 
     public function image()
     {

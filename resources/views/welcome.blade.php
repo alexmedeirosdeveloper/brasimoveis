@@ -24,7 +24,15 @@
 
   <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="card">
-    <a href="/propriedade/{{$property->id}}/"><img src="{{url("\storage\properties\{{$properties->ref}}\{{$properties->ref . '-' . '1' .'.jpg'}}") }}"/></a>
+    <a href="/propriedade/{{$property->id}}/"><img src="{{url("/storage/{$property->image}") }}"/></a>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <i class="bi bi-arrow-left-circle-fill"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <i class="bi bi-arrow-right-circle-fill"></i>
+    <span class="sr-only">Next</span>
+  </a>
       <div class="card-body">
         <span class="sale-rent"><a href="/propriedade/{{$property->id}}/">R$ {{$property->price}}</a></span>
         <span class="sale-rent">{{$property->area}}</span>

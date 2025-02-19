@@ -18,7 +18,7 @@
                     <div class="col-md-12">
                         <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Lista de Propriedades</h4>
+                            <h4 class="card-title">Mensagens do Formulário de Contato</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

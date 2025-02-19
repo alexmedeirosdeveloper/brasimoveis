@@ -124,7 +124,7 @@ class PropertyController extends Controller
             if($request->hasFile('image') && $request->file('image')->isValid()){
 
                 $ref = $property->ref = $request->ref;
-
+                
 
                 Storage::makeDirectory("/app/public/properties/$ref");
                 
@@ -178,19 +178,21 @@ class PropertyController extends Controller
 
 
 
-    public function show($id){
-        
+    public function show(Request $request, $id){
+
         $property = Property::findOrFail($id);
 
-        $ref = $property->ref;
+        $file = [];
 
-        $directory = storage_path('public/properties/' . $id);
+        $i = 0;
+        $directory = storage_path('properties/');
+        $files = Storage::allFiles('properties/' . $property->ref);
 
-        $files = Storage::allFiles($directory);
+
 
         //$propertyOwner = User::where('id', $event->user_id)->first() ->toArray();
 
-        return view ('propriedade', ['properties' => $property]);
+        return view ('propriedade', ['properties' => $property, 'files' => $files]);
 
     }
 
@@ -235,6 +237,43 @@ class PropertyController extends Controller
         $data = $request->all();
 
         Property::findOrFail($request->id)->update($data);
+
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+
+            $ref = $property->ref = $request->ref;
+            
+
+            Storage::makeDirectory("/app/public/properties/$ref");
+            
+            $imagePath = $request->image->storeAs('properties/' . $ref, $ref . '-1.jpg');
+
+
+            $property['image'] = $imagePath;
+
+            }
+
+        if($request->hasFile('imageSlide')){
+
+            $imgSlide = [];
+
+            $ref = $property->ref = $request->ref;
+
+            $id = $property->id = $request->id;
+
+            $i = 2;
+
+
+            foreach ($request->file('imageSlide') as $slide) {
+
+
+
+                $imgSlide[] = ['imageSlide' => $slide->storeAs('properties/' . $ref, $ref . '-' . $i++ . '.jpg')];
+
+
+            }
+
+
+        }
 
 
         return redirect('/dashboard')->with('msg', 'Propriedade Atualizada com sucesso!');

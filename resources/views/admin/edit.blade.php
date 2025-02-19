@@ -32,37 +32,37 @@
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Título</label>
-                                <input type="text" class="form-control" id="title" name="title" value="{{$property->title}}">
+                                <input type="text" class="form-control" id="title" name="title" value="{{$property->title}}" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Referência</label>
-                                <input type="text" class="form-control" id="ref" name="ref" value="{{$property->ref}}">
+                                <input type="text" class="form-control" id="ref" name="ref" value="{{$property->ref}}" required>
                         </div>                        
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Preço</label>
-                                <input type="number" class="form-control" id="price" name="price" step="0.00" value="{{$property->price}}">
+                                <input type="text" class="form-control" id="price" name="price" step="0.00" value="{{$property->price}}" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Número de Banheiros</label>
-                                <input type="text" class="form-control" id="bath" name="bath" value="{{$property->bath}}">
+                                <input type="text" class="form-control" id="bath" name="bath" value="{{$property->bath}}" required>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlInput1" class="form-label">Número de Vagas (Garagem)</label>
-                                <input type="text" class="form-control" id="garage" name="garage" value="{{$property->garage}}">
+                                <input type="text" class="form-control" id="garage" name="garage" value="{{$property->garage}}" required>
                         </div>                                                                        
                         <div class="mb-3 p-4">
                             <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-                            <textarea class="form-control" id="description" name="description" rows="3" value="{{$property->description}}"></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="3" required>{{$property->description}}</textarea>
                         </div>
                         <div class="mb-3 p-4">
-                            <select class="form-select" aria-label="Default select example" id="location" name="location">
-                                <option value="">Localização</option>
+                            <select class="form-select" aria-label="Default select example" id="location" name="location" required>
+                                <option value="{{$property->location}}">Localização</option>
                                 <option value="Morada da Praia">Morada da Praia</option>
                             </select>
                         </div>  
                         <div class="mb-3 p-4">
-                        <select class="form-select" aria-label="Default select example" id="bed" name="bed">
-                            <option value="">Dormitórios</option>
+                        <select class="form-select" aria-label="Default select example" id="bed" name="bed" required>
+                            <option value="{{$property->bed}}">Dormitórios</option>
                             <option value="1">1 dormitório</option>
                             <option value="2">2 dormitórios</option>
                             <option value="3">3 dormitórios</option>
@@ -76,8 +76,8 @@
                         </select>
                         </div>
                         <div class="mb-3 p-4">
-                          <select class="form-select" aria-label="Default select example" id="priceRange" name="priceRange">
-                            <option value="">Média de Preço</option>
+                          <select class="form-select" aria-label="Default select example" id="priceRange" name="priceRange"required> 
+                            <option value="{{$property->priceRange}}">Média de Preço</option>
                             <option value="Até 500 mil">Até 500 mil</option>
                             <option value="500 mil -600 mil">500 mil -600 mil</option>
                             <option value="600 mil -700 mil">600 mil -700 mil</option>
@@ -93,8 +93,8 @@
                           </select>                          
                         </div>
                         <div class="mb-3 p-4">
-                          <select class="form-select" id="type" name="type" aria-label="Default select example">
-                            <option value="">Tipo de Propriedade</option>
+                          <select class="form-select" id="type" name="type" aria-label="Default select example" required>
+                            <option value="{{$property->type}}">Tipo de Propriedade</option>
                             <option value="Casa Térrea">Casa Térrea</option>
                             <option value="Sobrado">Sobrado</option>
                             <option value="Edícula">Edícula</option>
@@ -103,8 +103,8 @@
                           </select>                          
                         </div>
                         <div class="col-md-2 m-3">
-                        <select class="form-select" aria-label="Default select example" id="area" name="area">
-                            <option value="">Area em m²</option>
+                        <select class="form-select" aria-label="Default select example" id="area" name="area" required>
+                            <option value="{{$property->area}}">Area em m²</option>
                             <option value="100 à 200 m²">100 à 200 m²</option>
                             <option value="200 à 300 m² ">200 à 300 m² </option>
                             <option value="300 à 400 m²">300 à 400 m²</option>

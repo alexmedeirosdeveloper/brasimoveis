@@ -11,8 +11,21 @@
   <main class="main">
 
 
+
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Contato</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
       <div class="heading-filter">
       <div class="container">
           <div class="row d-flex justify-content-center text-center">
@@ -90,6 +103,36 @@
                   </div>
                 </div>
 
+                <div class="col-lg-12">
+
+<div class="card p-3">
+  <form action="/" method="GET">
+    <div class="row g-3 mt-2">
+
+              <div class="col-md-8">
+
+                  <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
+                  
+              </div>
+
+              <div class="col-md-4">
+
+                  <button class="btn btn-secondary btn-block">Procurar</button>
+                  
+              </div>
+        
+    </div>
+  </form>
+
+
+
+</div>
+
+
+
+</div>
+
+
               </div>
             </div>
           </div>
@@ -99,9 +142,8 @@
     
     <!-- End Page Title -->
 
-    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading">
+      <div class="heading-contact">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
@@ -111,15 +153,7 @@
           </div>
         </div>
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Contato</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+</div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
