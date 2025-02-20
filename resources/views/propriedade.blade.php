@@ -15,8 +15,8 @@
     <div class="container">
       <div class="row d-flex justify-content-center text-center">
         <div class="col-lg-8">
-          <h1>{{$properties->type}} no {{$properties->location}}</h1>
-          <p class="mb-0">{{$properties->description}}</p>
+        <h1>{{$properties->type}} no {{$properties->location}}</h1>
+
         </div>
       </div>
     </div>
@@ -65,7 +65,10 @@
         <div class="col-md-4 real-estate-2 section" data-aos="fade-up" data-aos-delay="100" id="real-estate-2">
           <div class="row d-flex justify-content-center text-center">
             <div class="portfolio-info">
-              <h3>Dados do Imóvel</h3>
+            <h3>Dados do Imóvel</h3>
+              <p class="mb-0">{{$properties->description}}</p>
+              
+              </br>
               <ul>
                 <li><strong>Referência:</strong> {{$properties->ref}}</li>
                 <li><strong>Localização:</strong> {{$properties->location}}</li>
