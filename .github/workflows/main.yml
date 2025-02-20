@@ -17,5 +17,6 @@ jobs:
         server-dir: public_html/brasimoveis/
         exclude: |
           **/.env*
+          **/properties*
           **/.env.example*/**
           fileToExclude.txt
