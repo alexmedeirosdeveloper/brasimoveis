@@ -1307,7 +1307,6 @@ font-size:50px;
 }
 
 .real-estate .card:before {
-  content: "";
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1324,7 +1323,7 @@ font-size:50px;
 }
 
 .real-estate .card .card-body {
-  background-color: #f58220;
+  background-color: #4285f4;
   position: absolute;
   bottom: 0;
   left: 0;
