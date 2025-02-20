@@ -1323,7 +1323,7 @@ font-size:50px;
 }
 
 .real-estate .card .card-body {
-  background-color: #4285f4;
+  background-color: #2e3192;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1338,8 +1338,6 @@ font-size:50px;
   font-weight: 500;
   color: #fff;
   padding: 2px 4px;
-  border: 2px solid #fff;
-  border-radius: 50px;
   margin-bottom: 10px;
 }
 

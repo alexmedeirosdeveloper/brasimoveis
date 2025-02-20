@@ -34,8 +34,7 @@
     <span class="sr-only">Next</span>
   </a>
       <div class="card-body">
-        <span class="sale-rent"></h3><a href="/propriedade/{{$property->id}}/">{{$property->type}}</a></h3></span>
-        <span class="sale-rent"><a href="/propriedade/{{$property->id}}/">Referência: {{$property->ref}}</a></span>
+        <span class="sale-rent"><a href="/propriedade/{{$property->id}}/">Ref: {{$property->ref}}</a></span>
         <span class="sale-rent"><a href="/propriedade/{{$property->id}}/">{{$property->price}}</a></span>
           <div class="d-flex flex-column justify-content-center text-center">
             <div class="row propery-info">
