@@ -591,8 +591,13 @@ border: 1px solid #00838f;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+.page-title .heading-filter h3{
+  font-size: 25px;
+  font-weight: 700;
+}
+
 .page-title .heading-properties {
-  padding: 160px 0 40px 0;
+  padding: 120px 0 0px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -612,8 +617,8 @@ border: 1px solid #00838f;
   font-weight: 700;
 }
 
-.page-title .heading-contact h1 {
-  font-size: 38px;
+.page-title .heading-contact h3 {
+  font-size: 25px;
   font-weight: 700;
 }
 

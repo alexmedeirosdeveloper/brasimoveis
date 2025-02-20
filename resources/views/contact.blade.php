@@ -30,7 +30,7 @@
           <div class="container">
                 <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Procurar Propriedades</h1>
+              <h3>Procurar Propriedades</h3>
             </div>
           </div>
                 <div class="col-md-12">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-2 m-3">
                           <select class="form-select" aria-label="Default select example" id="priceRange" name="priceRange" value="{{$priceRange}}">
-                            <option value="">Média de Preço</option>
+                            <option value="">Média Preço</option>
                             <option value="Até 500 mil">Até 500 mil</option>
                             <option value="500 mil -600 mil">500 mil -600 mil</option>
                             <option value="600 mil -700 mil">600 mil -700 mil</option>
@@ -99,7 +99,7 @@
                                 <div class="row">
                                   <div class="col-md-8">
 
-                                      <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
+                                      <input type="number" id="search" name="search" class="form-control" placeholder="Digite a ref. do imóvel">
                                       
                                   </div>
 
@@ -148,7 +148,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Contato</h1>
+              <h3>Contato</h3>
               <p class="mb-0">Tire suas dúvidas através do Whatsapp ou pelo nosso formulário de contato abaixo.</p>
             </div>
           </div>

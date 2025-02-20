@@ -12,15 +12,6 @@
 <!-- Page Title -->
 <div class="page-title" data-aos="fade">
   <div class="heading-properties">
-    <div class="container">
-      <div class="row d-flex justify-content-center text-center">
-        <div class="col-lg-8">
-        <h1>{{$properties->type}} no {{$properties->location}}</h1>
-
-        </div>
-      </div>
-    </div>
-  </div>
   <nav class="breadcrumbs">
     <div class="container">
       <ol>
@@ -29,6 +20,7 @@
       </ol>
     </div>
   </nav>
+  </div>
 </div><!-- End Page Title -->
 
 
