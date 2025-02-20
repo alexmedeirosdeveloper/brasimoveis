@@ -25,10 +25,28 @@
     </div><!-- End Page Title -->
 
         <!-- Page Title -->
-        <div class="page-title" data-aos="fade">
-      <div class="heading-filter">
-      <div class="container">
-          <div class="row d-flex justify-content-center text-center">
+      <div class="page-title" data-aos="fade">
+        <div class="heading-filter">
+          <div class="container">
+            <div class="container mt-3">
+              <br>
+              <!-- Nav pills -->
+              <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#home">Procurar Propriedades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#menu1">Procurar Referência</a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                
+                
+                
+                <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Procurar Propriedades</h1>
             </div>
@@ -101,37 +119,47 @@
                       </div>
                     </form>
                   </div>
+                </div>                
+                
+                
                 </div>
+                <div id="menu1" class="container tab-pane fade"><br>
 
+
+                <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Procurar Referência</h1>
+            </div>
+          </div>
                 <div class="col-lg-12">
+                  <div class="card p-3">
+                    <form action="/" method="GET">
+                      <div class="row g-3 mt-2">
 
-<div class="card p-3">
-  <form action="/" method="GET">
-    <div class="row g-3 mt-2">
+                                <div class="col-md-8">
 
-              <div class="col-md-8">
+                                    <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
+                                    
+                                </div>
 
-                  <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
-                  
+                                <div class="col-md-4">
+
+                                    <button class="btn btn-secondary btn-block">Procurar</button>
+                                    
+                                </div>
+                          
+                      </div>
+                    </form>
+
+
+
+                </div>
+                
+                
+                </div>
               </div>
-
-              <div class="col-md-4">
-
-                  <button class="btn btn-secondary btn-block">Procurar</button>
-                  
-              </div>
-        
-    </div>
-  </form>
-
-
-
-</div>
-
-
-
-</div>
-
+            </div>
+    
 
               </div>
             </div>

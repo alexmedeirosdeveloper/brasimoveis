@@ -1319,18 +1319,19 @@ font-size:50px;
   inset: 0;
   display: block;
   width: 100%;
+  height: 260px;
   object-fit: cover;
   z-index: 1;
 }
 
 .real-estate .card .card-body {
-  background-color: #000;
+  background-color: #f58220;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2;
-  padding: 0px;
+  padding: 5px;
 }
 
 .real-estate .card .card-body .sale-rent {
@@ -1338,8 +1339,8 @@ font-size:50px;
   font-size: 12px;
   font-weight: 500;
   color: #fff;
-  padding: 4px 20px;
-  border: 2px solid #f58220;
+  padding: 2px 4px;
+  border: 2px solid #fff;
   border-radius: 50px;
   margin-bottom: 10px;
 }
@@ -1347,6 +1348,12 @@ font-size:50px;
 .real-estate .card .card-body .sale-rent a {
 
   color: #fff;
+
+}
+
+.real-estate .card .card-body .sale-rent a:hover {
+
+  color: #000;
 
 }
 
@@ -1384,8 +1391,14 @@ font-size:50px;
   padding: 0 10px;
 }
 
-.real-estate .card .card-body .card-content .propery-info {
+.propery-info a {
   font-weight: 300;
+  color: #fff;
+}
+
+.propery-info a:hover {
+  font-weight: 300;
+  color: #000;
 }
 
 .real-estate .card:hover .card-content {
@@ -1561,5 +1574,10 @@ font-size:50px;
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Dachboard Section Section
 --------------------------------------------------------------*/
+
+.dashboard-img{
+  height: 300px;
+  max-width: 100%;
+}

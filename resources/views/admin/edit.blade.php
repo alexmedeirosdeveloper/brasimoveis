@@ -24,7 +24,7 @@
                         <div class="mb-3 p-4">
                             <label for="image">Imagem da Página Inicial</label>
                             <input type="file" id="image" name="image" class="form-control-file">
-                            <img src="{{url("/storage/{$property->image}") }}" alt="img-preview">
+                            <img class="dashboard-img" src="{{url("/storage/{$property->image}") }}" alt="img-preview"/>
                         </div>
                         <div class="mb-3 p-4">
                             <label for="imageSlide">Imagem dos Slides</label>

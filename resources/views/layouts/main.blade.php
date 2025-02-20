@@ -87,37 +87,6 @@
         </div>
 
 
-            <div class="col-lg-6">
-
-                    <div class="card p-3">
-                      <form action="/" method="GET">
-                        <div class="row g-3 mt-2">
-
-                                  <div class="col-md-8">
-
-                                      <input type="number" id="search" name="search" class="form-control" placeholder="Digite o número da referência do imóvel aqui">
-                                      
-                                  </div>
-
-                                  <div class="col-md-4">
-
-                                      <button class="btn btn-secondary btn-block">Procurar</button>
-                                      
-                                  </div>
-                            
-                        </div>
-                      </form>
-
-
-
-                    </div>
-
-
-
-            </div>
-
-    
-
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Braz Imóveis</strong> <span>Todos os Direitos Reservados</span></p>
       <div class="credits">
