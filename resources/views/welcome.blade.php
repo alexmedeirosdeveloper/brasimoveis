@@ -39,15 +39,11 @@
         <span class="sale-rent"><a href="/propriedade/{{$property->id}}/">{{$property->price}}</a></span>
           <div class="d-flex flex-column justify-content-center text-center">
             <div class="row propery-info">
-              <div class="col"><a href="/propriedade/{{$property->id}}/">Dormitórios</a></div>
-              <div class="col"><a href="/propriedade/{{$property->id}}/">Banheiro</a></div>
-              <div class="col"><a href="/propriedade/{{$property->id}}/">Vagas</a></div>
+              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->bed}} Dormitórios</a></div>
+              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->bath}} Banheiros</a></div>
+              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->garage}} Vagas</a></div>
             </div>
-            <div class="row propery-info">
-              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->bed}}</a></div>
-              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->bath}}</a></div>
-              <div class="col"><a href="/propriedade/{{$property->id}}/">{{$property->garage}}</a></div>
-            </div>
+
           </div>
       </div>
     </div>

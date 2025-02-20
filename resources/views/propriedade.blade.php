@@ -37,7 +37,7 @@
 <section class="ftco-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-md-8">
           
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -62,22 +62,23 @@
 </div>
           
 					</div>
-          <div class="col-md-2 real-estate-2 section" data-aos="fade-up" data-aos-delay="100" id="real-estate-2">
-        <div class="portfolio-info">
-          <h3>Dados do Imóvel</h3>
-          <ul>
-            <li><strong>Referência:</strong> {{$properties->ref}}</li>
-            <li><strong>Localização:</strong> {{$properties->location}}</li>
-            <li><strong>Tipo da Propriedade:</strong> {{$properties->type}}</li>
-            <li><strong>Preço:</strong> {{$properties->price}}</li>
-            <li><strong>Área:</strong> {{$properties->area}}</li>
-            <li><strong>Quartos:</strong> {{$properties->bed}}</li>
-            <li><strong>Banheiros:</strong> {{$properties->bath}}</li>
-          </ul>
+        <div class="col-md-4 real-estate-2 section" data-aos="fade-up" data-aos-delay="100" id="real-estate-2">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="portfolio-info">
+              <h3>Dados do Imóvel</h3>
+              <ul>
+                <li><strong>Referência:</strong> {{$properties->ref}}</li>
+                <li><strong>Localização:</strong> {{$properties->location}}</li>
+                <li><strong>Tipo da Propriedade:</strong> {{$properties->type}}</li>
+                <li><strong>Preço:</strong> {{$properties->price}}</li>
+                <li><strong>Área:</strong> {{$properties->area}}</li>
+                <li><strong>Quartos:</strong> {{$properties->bed}}</li>
+                <li><strong>Banheiros:</strong> {{$properties->bath}}</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
 				</div>
-			</div>
 		</section>
 
 </main>
