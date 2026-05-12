@@ -1,0 +1,105 @@
+@extends('layouts.main')
+
+@section('title', 'Propriedades')
+
+@section ('content')
+
+
+
+
+<main class="main">
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+  <div class="heading-properties">
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li class="current">{{$properties->type}} no {{$properties->location}}</li>
+      </ol>
+    </div>
+  </nav>
+  </div>
+</div><!-- End Page Title -->
+
+
+
+
+<section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+          
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <a href="#">
+                <img src="/storage/properties/{{$properties->ref}}/{{$properties->ref . '-1.jpg'}}"
+                     alt="Image"
+                     class="img-fluid slider">
+            </a>
+        </div>
+
+        @for ($i = 2; $i <= count($files); $i++)
+
+            <div class="carousel-item">
+                <a href="#">
+                    <img src="/storage/properties/{{$properties->ref}}/{{$properties->ref . '-' . $i . '.jpg'}}"
+                         alt="Image"
+                         class="img-fluid slider">
+                </a>
+            </div>
+
+        @endfor
+
+    </div>
+
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+
+        <i class="bi bi-arrow-left-circle-fill"></i>
+
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+
+        <i class="bi bi-arrow-right-circle-fill"></i>
+
+    </button>
+
+</div>
+          
+					</div>
+        <div class="col-md-4 real-estate-2 section" data-aos="fade-up" data-aos-delay="100" id="real-estate-2">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="portfolio-info">
+            <h3>Dados do Imóvel</h3>
+              <p class="mb-0">{{$properties->description}}</p>
+              
+              </br>
+              <ul>
+                <li><strong>Referência:</strong> {{$properties->ref}}</li>
+                <li><strong>Localização:</strong> {{$properties->location}}</li>
+                <li><strong>Tipo da Propriedade:</strong> {{$properties->type}}</li>
+                <li><strong>Preço:</strong> {{$properties->price}}</li>
+                <li><strong>Área:</strong> {{$properties->area}}</li>
+                <li><strong>Quartos:</strong> {{$properties->bed}}</li>
+                <li><strong>Banheiros:</strong> {{$properties->bath}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+				</div>
+		</section>
+
+</main>
+
+@endsection
